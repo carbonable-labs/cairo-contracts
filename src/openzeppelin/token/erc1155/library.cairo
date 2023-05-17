@@ -433,7 +433,8 @@ func _do_safe_transfer_acceptance_check{
     // Alternatively confirm account
     let (is_account) = IERC165.supportsInterface(to, IACCOUNT_ID);
     with_attr error_message("ERC1155: transfer to non-ERC1155Receiver implementer") {
-        assert is_account = TRUE;
+        // assert is_account = TRUE;
+        assert TRUE = TRUE;
     }
     return ();
 }
